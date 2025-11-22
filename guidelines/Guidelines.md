@@ -1,67 +1,104 @@
-**Add your own guidelines here**
-<!--
+# Fundamentals
 
-System Guidelines
+## Colors
+### Description
+Colors define brand identity, semantic meaning, and structural hierarchy. Mística uses brand palettes, semantic palettes and neutrals, with built-in support for light and dark color schemes and contextual variants.
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+For this context, always use the brand "Vivo-new" and it's tokens, by using the CSS document or figma variables brand "Vivo-new".
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+### Rules of Use
+- Use brand colors for primary actions and highlights.
+- Use semantic colors (success, warning, error) for status messaging.
+- Use neutral palette for backgrounds and text hierarchy.
+- Respect contrast ratios defined in WCAG 2.2.
+- Use inverse contexts when placing components over colored or media backgrounds.
 
-# General guidelines
+### Decision Examples
+- If a button appears over brand background → use inverse variant.
+- If a section needs emphasis → use backgroundAlternative.
+- If placing text over an image → use textPrimaryInverse or textSecondaryInverse.
 
-Any general rules you want the AI to follow.
-For example:
+## Typography
+### Description
+Typography is structured using text-presets, which define font size, weight, and line height per device type (mobile/desktop).
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+### Rules of Use
+- Always use text-presets; do not manually override sizes.
+- Maintain hierarchy visually through preset selection.
+- Large sizes (preset 5+) have weight controlled by brand skin.
+
+### Decision Examples
+- Use text-preset-6 for section titles.
+- Use text-preset-3 for body text.
+- Use preset-10 only for major headlines or hero areas.
+
+## Spacing
+### Description
+Spacing follows a vertical rhythm with defined levels (L1–L4). Tokens ensure consistency across flows.
+
+### Rules of Use
+- Use spacing tokens instead of fixed pixels.
+- Apply Level 1 spacing around header/footer blocks.
+- Apply Level 2 spacing between major content blocks.
+- Apply Level 3 spacing between title and content inside a block.
+- Apply Level 4 spacing between components inside a block.
+
+### Decision Examples
+- When grouping related cards → use Level 3 (16px/24px).
+- When separating sections → use Level 2 (40px mobile, 48px desktop).
+
+## Layouts
+### Description
+Layouts define responsive grids, breakpoints, and flow structures.
+
+### Rules of Use
+- Use responsive layout to center content across breakpoints.
+- Use grid templates (6+6, 8+4, 3+9) depending on content type.
+- Use horizontal scroll only when content overflow is expected.
+- Align items with Align component when needed.
+
+### Decision Examples
+- For image + text → use grid 6+6.
+- For main content + aside → use grid 8+4.
+- For left navigation → use grid 3+9.
+
+## Motion
+### Description
+Motion provides meaning through easing and duration tokens. Animations should be subtle and accessible.
+
+### Rules of Use
+- Use FadeIn for newly added content.
+- Use standard easing curves for UI transitions.
+- Disable autoplay for videos when prefers-reduced-motion is enabled.
+- Show video playback controls if duration > 5s or autoplay disabled.
+
+### Decision Examples
+- Use 1000ms fade for onboarding transitions.
+- Use shorter transitions (150–250ms) for micro-interactions.
+
+## Iconography
+### Description
+Icons come in Light, Regular, and Filled styles, automatically adapting to brand skins.
+
+### Rules of Use
+- Use Regular for default sizes (24px).
+- Use Light for large icons (>48px).
+- Use Filled only for low-resolution environments (e.g., TV).
+- Icons must be consistent within a section.
+
+### Decision Examples
+- Use Light style in hero illustrations.
+- Use Regular style for navigation and actions.
 
 --------------
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
-
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
-
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
-
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
+# Components
 
 --------------
 
-Content Design guidelines
+# Patterns
+
+--------------
 
 # Vivaz e Tom de Voz
 
@@ -74,6 +111,8 @@ As diretrizes do Vivaz apoiam as equipes no dia a dia e garantem uma comunicaç�
 O nome **Vivaz** simboliza algo duradouro, cheio de energia e em constante evolução. Assim como a língua portuguesa, nosso Design System está sempre vivo e se adapta às necessidades dos nossos usuários.
 
 ---
+
+# Content Design
 
 ## Diretrizes gerais de Tom de Voz na Vivo
 
@@ -109,9 +148,9 @@ Nosso tom de voz reflete quem somos e como nos comunicamos. Ele se baseia em cin
 
 ---
 
-# Diretrizes Gerais de Linguagem da Vivo
+## Diretrizes Gerais de Linguagem da Vivo
 
-## Linguagem Conversacional
+### Linguagem Conversacional
 Use textos conversacionais, descomplicados e acessíveis, próximos da forma como as pessoas falam no dia a dia.
 
 **Exemplos Corretos:**
