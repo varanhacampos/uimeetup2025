@@ -372,7 +372,7 @@ Usamos a voz ativa para reforçar que as pessoas estão no centro da comunicaç�
 - "O problema foi resolvido pela equipe técnica."
 
 ---
-
+ 
 ## Modos Verbais
 Damos preferência ao uso de verbos no infinitivo, pois indicam a ação a ser executada.
 
