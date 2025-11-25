@@ -90,6 +90,144 @@ Icons come in Light, Regular, and Filled styles, automatically adapting to brand
 - Use Light style in hero illustrations.
 - Use Regular style for navigation and actions.
 
+---
+
+# Layout & Grid Guidelines
+
+Este guia define o comportamento do layout responsivo, breakpoints, grid e templates estruturais utilizados no projeto. Ele garante consistência visual, escalabilidade e previsibilidade em todas as interfaces.
+
+## Breakpoints
+
+### sm:
+- Intervalo: 320 a 767 px
+- Margem horizontal: 16 px
+
+### md:
+- Tablets
+- Intervalo: 768 a 1023 px
+- Margem horizontal: 32 px
+
+### lg:
+- Desktops pequenos
+- Intervalo: 1024 a 1511 px
+- Margem horizontal: 48 px
+
+### xl:
+- Desktops maiores
+- Intervalo: 1512 px ou mais
+- Margem horizontal: Automática (conteúdo centralizado)
+
+## Regras gerais de breakpoints:
+
+- As margens laterais aumentam conforme a largura do dispositivo.
+- Em large desktop, a margem é fluida para centralizar o conteúdo.
+- As margens definem o limite horizontal máximo do grid.
+
+## Grid System
+
+### sm:
+- Número de colunas: 1
+- Tamanho das colunas: Fluido
+- Gutter: Nenhum
+
+### md:
+- Número de colunas: 1
+- Tamanho das colunas: Fluido
+- Gutter: Nenhum
+
+### lg:
+- Número de colunas: 12
+- Tamanho das colunas: Fluido
+- Gutter: 24 px
+
+### xl:
+- Número de colunas: 12
+- Tamanho das colunas: 96 px por coluna
+- Gutter: 24 px
+
+## Regras gerais do grid:
+
+Em mobile e tablet, o grid é sempre uma coluna única.
+
+Em desktop, o layout passa a utilizar 12 colunas responsivas.
+
+Em large desktop, cada coluna tem largura fixa de 96 px.
+
+Os gutters permanecem sempre em 24 px em telas amplas.
+
+## Grid Layout Templates
+
+Os templates abaixo representam combinações pré-definidas de colunas para organizar o conteúdo de forma consistente.
+
+### Template 6 + 6
+- Distribuição equilibrada meio a meio.
+
+Ideal para:
+- Imagem + texto
+- Heros simples
+- Seções com equilíbrio visual
+
+### Template 8 + 4
+- Coluna principal ampla e coluna auxiliar estreita.
+
+Ideal para:
+- Conteúdo + aside
+- Navegação secundária
+- Blocos complementares
+
+### Template 4 + 6
+- Coluna menor seguida de coluna principal.
+
+Ideal para:
+- Master-detail
+- Listagens + conteúdo expandido
+
+### Template 5 + 4
+- Template exclusivo para full screen funnel.
+
+Ideal para:
+- Step-by-step
+- Fluxos guiados
+- Processos de conversão
+
+### Template 3 + 9
+- Coluna estreita com coluna principal expandida.
+
+Ideal para:
+- Navegação lateral
+- Filtros
+- Ferramentas com menu persistente
+
+## Comportamento Responsivo
+
+### Mobile e Tablet
+
+Todo template se transforma automaticamente em uma única coluna vertical.
+
+A ordem de leitura deve respeitar a hierarquia do conteúdo.
+
+Proporções horizontais deixam de ser consideradas.
+
+### Desktop e Large Desktop
+
+Os templates assumem sua proporção de colunas original.
+
+Deve-se respeitar:
+
+Margens definidas por breakpoint
+
+Gutter fixo de 24 px
+
+Limite total de 12 colunas
+
+## Boas Práticas
+- Utilize sempre o grid oficial para composições.
+- Evite expandir conteúdo para a largura total em large desktop.
+- Priorize legibilidade em telas pequenas.
+- Respeite as proporções originais dos templates para garantir consistência.
+
+Evite combinações de colunas fora dos templates definidos.
+
 --------------
 
 # Components
