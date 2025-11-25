@@ -1,7 +1,10 @@
 "scripts": {
   "build": "vite build"
 }
-
+"devDependencies": {
+  "vite": "...",
+  "@vitejs/plugin-react": "..."
+}
 {
     "name": "@telefonica/mistica",
     "version": "16.42.2",
